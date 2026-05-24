@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/admin-fetcher.css">
+</head>
+<body>
+<script>
+if(sessionStorage.getItem("admin") !== "true"){
+    window.location.href = "login.html";
+}
+</script>
+<section class="dashboard reveal">
+    <h1>Admin Dashboard</h1>
+    <div class="admin-actions">
+        <a href="../products.html" class="secondary-btn">View Product List</a>
+        <a href="remove.html" class="secondary-btn">Remove Products</a>
+        <span id="productCount" class="product-count">0 products stored</span>
+    </div>
+    <div id="productList" class="product-list"></div>
+    
+    <div class="amazon-fetcher">
+        <h2>Fetch from Amazon</h2>
+        <p>Paste an Amazon ASIN (product ID) to auto-fetch name, price, and image.</p>
+        <form id="fetchForm">
+            <input type="text" id="asinInput" placeholder="Enter Amazon ASIN (e.g., B08F7NTT5K)" required>
+            <button type="submit" class="primary-btn">Fetch Product Data</button>
+        </form>
+        <div id="fetchResult" class="fetch-result" style="display:none;"></div>
+    </div>
+    
+    <h2>Add Product Manually</h2>
+    <form id="productForm">
+        <input type="text" id="name" placeholder="Product Name" required>
+        <textarea id="desc" placeholder="Description" required></textarea>
+        <div class="form-group">
+            <label for="imageUpload">Upload Image:</label>
+            <input type="file" id="imageUpload" accept="image/*">
+        </div>
+        <input type="text" id="image" placeholder="Or paste Image URL" required>
+        <input type="text" id="price" placeholder="Price" required>
+        <select id="category" required>
+            <option value="">Select Category</option>
+            <option value="tech">Tech</option>
+            <option value="gaming">Gaming</option>
+            <option value="fitness">Fitness</option>
+            <option value="home">Home</option>
+            <option value="kitchen">Kitchen</option>
+            <option value="outdoors">Outdoors</option>
+            <option value="beauty">Beauty</option>
+            <option value="office">Office</option>
+        </select>
+        <select id="rating" required>
+            <option value="">Select Rating</option>
+            <option value="★☆☆☆☆">1 Star</option>
+            <option value="★★☆☆☆">2 Stars</option>
+            <option value="★★★☆☆">3 Stars</option>
+            <option value="★★★★☆">4 Stars</option>
+            <option value="★★★★★">5 Stars</option>
+        </select>
+        <input type="text" id="link" placeholder="Amazon Affiliate Link" required>
+        <button type="submit" class="primary-btn">Add Product</button>
+    </form>
+</section>
+<footer class="footer reveal">
+    <p>Disclosure: This website participates in the Amazon Affiliate Program. As an Amazon Associate, we may earn commissions from qualifying purchases at no extra cost to you.</p>
+</footer>
+<script src="../js/admin.js"></script>
+<script src="../js/fetch-admin.js"></script>
+<script src="../js/animation.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+.login-container,
+.dashboard{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+}
+
+.login-box,
+.dashboard form{
+
+    width:100%;
+
+    max-width:600px;
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(18px);
+
+    padding:40px;
+
+    border-radius:24px;
+}
+
+.dashboard{
+
+    flex-direction:column;
+}
+
+.dashboard h1{
+
+    margin-bottom:30px;
+}
+
+.dashboard form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.form-group label{
+    color:#e5e7eb;
+    font-size:0.95rem;
+    font-weight:500;
+}
+
+.dashboard input,
+.dashboard textarea,
+.dashboard select,
+.login-box input{
+
+    width:100%;
+
+    padding:16px;
+
+    background:#111827;
+
+    border:none;
+
+    border-radius:12px;
+
+    color:white;
+}
+
+.dashboard select option{
+    background:#111827;
+    color:white;
+}
+
+
+.product-list{
+    width:100%;
+    max-width:760px;
+    margin-bottom:2rem;
+    display:grid;
+    gap:1rem;
+}
+
+.product-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:1rem;
+    padding:1rem 1.25rem;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+}
+
+.product-item-details{
+    display:grid;
+    gap:0.35rem;
+    color:#e5e7eb;
+    flex:1;
+}
+
+.product-item-details strong{
+    font-size:1rem;
+}
+
+.product-item-details span,
+.product-item-details p{
+    color:#9ca3af;
+    font-size:0.95rem;
+}
+
+.product-item-actions{
+    display:flex;
+    gap:0.5rem;
+}
+
+.edit-btn,
+.delete-btn{
+    padding:0.8rem 1rem;
+    border-radius:999px;
+    cursor:pointer;
+    transition:transform .2s ease, background .2s ease;
+    font-size:0.9rem;
+    font-weight:600;
+}
+
+.edit-btn{
+    background:#3b82f6;
+    color:#fff;
+}
+
+.edit-btn:hover{
+    transform:translateY(-2px);
+    background:#2563eb;
+}
+
+.delete-btn{
+    background:#dc2626;
+    color:#fff;
+}
+
+.delete-btn:hover{
+    transform:translateY(-2px);
+    background:#b91c1c;
+}
+
+
+.empty-list{
+    color:#cbd5e1;
+    font-size:0.98rem;
+    text-align:center;
+    padding:1rem 0;
+}
